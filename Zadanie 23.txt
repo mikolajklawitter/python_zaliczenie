@@ -1,0 +1,15 @@
+from collections import Counter
+
+def dominanta(tablica):
+  counter = 0
+  moda = tablica[0]
+  for i in tablica:
+    wartosc = tablica.count(i)
+    if( wartosc > counter):
+      counter = wartosc
+      moda = i
+
+  return moda
+
+tablica = [4,4,4,3,2,1,2,3]
+print (dominanta(tablica))

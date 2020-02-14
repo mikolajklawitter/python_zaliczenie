@@ -1,0 +1,91 @@
+import numpy
+def matrix_add(matrix1,matrix2):
+  return numpy.add(matrix1,matrix2)
+ 
+def matrix_subtract(matrix1,matrix2):
+  return numpy.subtract(matrix1,matrix2)
+ 
+def matrix_divide(matrix1,matrix2):
+  return numpy.divide(matrix1,matrix2)
+ 
+def matrix_multipy(matrix1,matrix2):
+  return numpy.multiply(matrix1,matrix2)
+ 
+#def matrix_dot(matrix1,matrix2):
+#  return numpy.dot(matrix1,matrix2)
+ 
+print("Wprowadz 1 element macierza I")
+m = int(input())
+print("Wprowadz 2 element macierza I")
+n = int(input())
+print("Wprowadz 3 element macierza I")
+m1 = int(input())
+print("Wprowadz 4 element macierza I")
+n1 = int(input())
+print("Wprowadz 1 element macierza II")
+m2 = int(input())
+print("Wprowadz 2 element macierza II")
+n2 = int(input())
+print("Wprowadz 3 element macierza II")
+m3 = int(input())
+print("Wprowadz 4 element macierza II")
+n3 = int(input())
+ 
+print("Wybierz opcje jaka chcesz wykonac na macierzach")
+print("1. Dodawanie macierzy 2D")
+print("2. Odejmowanie macierzy 2D")
+print("3. Dzielenie macierzy 2D")
+print("4. Mnozenie macierzy 2D")
+#print("5. Oblicz wyznacznik macierzy 2D")
+ 
+ 
+matrix1 = numpy.array([[m, n], [m1, n1]])
+matrix2 = numpy.array([[m2, n2], [m3, n3]])
+ 
+while True:
+  wybor = int(input())
+  if(wybor == 1):
+    print ("Suma macierzy: ", matrix_add(matrix1,matrix2))
+    break
+  elif(wybor == 2):
+    print ("Roznica macierzy: ", matrix_subtract(matrix1,matrix2))
+    break
+  elif(wybor == 3):
+    print ("Iloraz macierzy: ", matrix_divide(matrix1,matrix2))
+    break
+  elif(wybor == 4):
+    print(" ")
+    print("Wybierz odpowiednia opcje")
+    print("1. Mnozenie macierzy")
+    print("2. Mnozenie macierzy A przez liczbe")
+    print("3. Mnozenie macierzy B przez liczbe")
+    while True:
+      wybor_mnozenie = int(input())
+      if(wybor_mnozenie == 1):
+        print ("Iloczyn macierzy: ", matrix_multipy(matrix1,matrix2))
+        break
+      elif(wybor_mnozenie == 2):
+        print("Podaj liczbe")
+        matrix_mnozenie = int(input())
+        print ("Iloczyn macierzy A przez liczbe ",matrix_mnozenie, "wynosi ", matrix_mnozenie * matrix1 )
+        break
+      elif(wybor_mnozenie == 3):
+        print("Podaj liczbe")
+        matrix_mnozenie = int(input())
+        print ("Iloczyn macierzy B przez liczbe ",matrix_mnozenie, "wynosi ", matrix_mnozenie * matrix2 )
+        break
+      else:
+        print ("Nie wybrales poprawnej opcji menu! Sprobuj ponownie!")
+        print ("Wybierz ponownie opcje")
+        print("1. Mnozenie macierzy")
+        print("2. Mnozenie macierzy A przez liczbe")
+        print("3. Mnozenie macierzy B przez liczbe")
+    break  
+  else:
+    print ("Nie wybrales poprawnej opcji menu! Sprobuj ponownie!")
+    print ("Wybierz ponownie opcje")
+    print ("1. Dodawanie macierzy 2D")
+    print ("2. Odejmowanie macierzy 2D")
+    print ("3. Dzielenie macierzy 2D")
+    print("4. Mnozenie macierzy 2D")
+ 

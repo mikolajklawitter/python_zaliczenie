@@ -1,0 +1,20 @@
+import statistics
+from collections import Counter
+
+def skosnosc(tablica):
+  s = statistics.stdev(tablica) #standard deviation - odchylenie
+  counter = 0
+  wynik = 0
+  moda = tablica[0]
+  for i in tablica:
+    wartosc = tablica.count(i)
+    if( wartosc > counter):
+      counter = wartosc
+      moda = i
+  d = moda
+  srednia_arytmetyczna = statistics.mean(tablica)
+  return (srednia_arytmetyczna - d) / s
+
+
+tablica = [5,3,6,4,3,5,7,7,3,5,5]
+print (skosnosc(tablica))

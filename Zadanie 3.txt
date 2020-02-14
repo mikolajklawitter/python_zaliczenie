@@ -1,0 +1,24 @@
+def mile(kilometr):
+  mile = kilometr * 0.62137
+  print(mile)
+  return
+
+def kilometr(mile):
+  km = mile / 0.62137
+  print(km)
+  return
+
+print("1. KM na M")
+print("2. M na KM")
+wybor = int(input())
+if(wybor == 1):
+  print("Podaj dystans w KM, ktory zostanie zamieniony na M")
+  kilometr = float(input())
+  M = mile(kilometr)
+elif(wybor == 2):
+  print("Podaj dystans w M, ktory zostanie zamieniony na KM")
+  mile = float(input())
+  KM = kilometr(mile)
+else:
+  print("Nie wybrales prawidlowej opcji")  
+  

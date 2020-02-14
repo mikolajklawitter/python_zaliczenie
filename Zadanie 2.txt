@@ -1,0 +1,23 @@
+def F(celcjusz_1):
+  fahrenheit_1 = (celcjusz_1 * 1.8) + 32
+  print(fahrenheit_1)
+  return
+
+def C(fahrenheit_2):
+  celcjusz_2 = (fahrenheit_2 - 32) / 1.8
+  print(celcjusz_2)
+  return
+
+print("1. C na F")
+print("2. F na C")
+wybor = int(input())
+if(wybor == 1):
+  print("Podaj temp. w C, ktora zostanie zamieniona na F")
+  celcjusz_1 = float(input())
+  C = F(celcjusz_1)
+elif(wybor == 2):
+  print("Podaj temp. w F, ktora zostanie zamieniona na C")
+  fahrenheit_2 = float(input())
+  F = C(fahrenheit_2)
+else:
+  print("Nie wybrales prawidlowej opcji")

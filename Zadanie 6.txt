@@ -1,0 +1,22 @@
+def dodawanie_ulamkow(licznik_1, mianownik_1, licznik_2, mianownik_2):
+  if(mianownik_1 == mianownik_2):
+    licznik_3 = licznik_1 + licznik_2
+    print("Ulamek jest rowny", licznik_3,"/",mianownik_1)
+    return
+  else:
+    mianownik_3 = mianownik_1 * mianownik_2
+    licznik_3_1 = licznik_1 * mianownik_2
+    licznik_3_2 = licznik_2 * mianownik_1
+    licznik_4 = licznik_3_1 + licznik_3_2
+    print("Ulamek jest rowny", licznik_4,"/",mianownik_3)
+    
+print("Podaj licznik1")
+licznik_1 = int(input())
+print("Podaj mianownik1")
+mianownik_1 = int(input())
+print("Podaj licznik2")
+licznik_2 = int(input())
+print("Podaj mianownik2")
+mianownik_2 = int(input())
+
+ulamek = dodawanie_ulamkow(licznik_1, mianownik_1, licznik_2, mianownik_2)
